@@ -1,0 +1,243 @@
+/* NavBar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: green;
+    color: white;
+    height: 60px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.navbar-left, .navbar-center, .navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left {
+    flex: 1;
+}
+
+.navbar-center {
+    max-width: 100%;
+    padding: 0 300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Adjust media queries as needed */
+@media (max-width: 1440px) {
+    .navbar-center {
+        padding: 0 150px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-center {
+        padding: 0 50px;
+    }
+}
+
+.navbar-right {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+/* Horizontal menu items */
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+}
+
+.navbar-menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+.navbar-menu li a:hover {
+    text-decoration: underline;
+}
+
+/* Hide horizontal menu on mobile */
+@media (max-width: 768px) {
+    .navbar-center {
+        display: none;
+    }
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 1000px); /* Account for padding on both sides */
+    margin: 0 auto;
+    padding: 0 500px; /* 500px padding on both sides */
+}
+
+/* Element spacing */
+.navbar-hamburger, .navbar-logo, .navbar-search {
+    margin-right: 15px;
+}
+
+.navbar-search input {
+    padding: 5px;
+    font-size: 16px;
+    width: 300px; /* Increase this value to make the search bar wider */
+    transition: width 0.3s;
+}
+
+/* Optional: Make search responsive */
+@media (max-width: 992px) {
+    .navbar-search input {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-search input {
+        width: 150px;
+    }
+}
+
+.navbar-cart {
+    margin-left: auto;
+}
+
+/* Other styles remain unchanged */
+.navbar-hamburger {
+    cursor: pointer;
+}
+
+.navbar-logo img {
+    height: 40px;
+}
+
+.navbar-search input {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.navbar-mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 30%;
+    background-color: green;
+    list-style: none;
+    padding: 10px 0;
+    z-index: 10;
+}
+
+/* Cart Popup styles */
+.cart-icon-container {
+    cursor: pointer;
+    position: relative;
+}
+
+.cart-popup {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 350px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    color: #333;
+    padding: 15px;
+}
+
+.cart-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.empty-cart-message {
+    text-align: center;
+    padding: 20px;
+    color: #999;
+}
+
+.cart-items {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item-image {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-name {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.cart-item-price {
+    font-size: 12px;
+    color: #666;
+}
+
+.remove-item-btn {
+    background: none;
+    border: none;
+    color: #f44336;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.cart-footer {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.checkout-btn {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.checkout-btn:hover {
+    background-color: darkgreen;
+}
